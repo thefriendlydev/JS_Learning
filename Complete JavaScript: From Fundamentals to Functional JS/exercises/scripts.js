@@ -26,8 +26,10 @@ for (var key in animal) {
 
 /* https://github.com/bgando/array-exercises/ */
 var noiseArray = ['ribbit']
+
 noiseArray.unshift('croak')
 noiseArray.push('caw')
+
 noiseArray[3] = 'moo'
 
 console.log(noiseArray.length)
