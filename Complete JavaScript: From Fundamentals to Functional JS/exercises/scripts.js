@@ -51,3 +51,79 @@ animals[animals.length] = quackers
 
 animals.push({ username: 'Sassy', tagline: 'Sweetpea is sooooo lame', noises: ['squeek', 'huff', 'sneeze', 'growl'] })
 animals.push({ username: 'Sweetpea', tagline: 'Whaaaaattttt?', noises: ['ruff', 'rawr', 'click', 'zing'] })
+
+
+/* https://github.com/bgando/function-exercises/ */
+// questions 1/2
+var AnimalTestUser = function (username) {
+  var numArgs = arguments.length
+  if (numArgs === 1) {
+    return {
+      username: username
+    }
+  } else if (numArgs > 1) {
+    var otherArgs = []
+    for (var i = 1; i < numArgs; i++) {
+      otherArgs.push(arguments[i])
+    }
+
+    return {
+      username: username,
+      otherArgs: otherArgs
+    }
+  } else {
+    console.log('Opps we need some arguments!')
+  }
+}
+
+var testSheep = AnimalTestUser('CottonBall', {'loves dancing': true}, [1,2,3] );
+console.log(testSheep)
+
+// question 3
+var AnimalCreator = function (username, species, tagline, noises) {
+  return {
+    username: username,
+    species: species,
+    tagline: tagline,
+    noises: noises,
+    friends: []
+  }
+}
+
+var sheep = AnimalCreator('Cloud', 'sheep', 'You can count on me!', ['baahhh', 'arrgg', 'chewchewchew'])
+console.log(sheep)
+
+var chameleon = AnimalCreator('Pascal', 'chameleon', 'You will never find me!', ['smack', 'blah', 'nomnomnom'])
+var dog = AnimalCreator('Sassy', 'pomeranian', 'I am the best!', ['woof', 'bark', 'chomp'])
+
+// questions 4/5
+var addFriend = function (animal, friend) {
+  animal.friends.push(friend.username)
+}
+addFriend(sheep, chameleon)
+addFriend(sheep, dog)
+console.log(sheep)
+
+// question 6
+var myFarm = [sheep, dog, chameleon]
+addFriend(chameleon, sheep)
+addFriend(chameleon, dog)
+addFriend(dog, chameleon)
+console.log(myFarm)
+
+// question 7
+var addMatchesArray = function (farm) {
+  for (var i = 0; i < farm.length; i++) {
+    farm[i].matches = []
+  }
+}
+addMatchesArray(myFarm)
+
+// question 8
+var giveMatches = function (farm) {
+  for (var i = 0; i < farm.length; i++) {
+    farm[i].matches.push(farm[i].friends[0])
+  }
+}
+giveMatches(myFarm)
+console.log(myFarm[0])
