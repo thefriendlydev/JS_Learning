@@ -125,3 +125,23 @@ var giveMatches = function (farm) {
 }
 giveMatches(myFarm)
 console.log(myFarm[0])
+
+/* https://github.com/bgando/nested-data-exercises */
+var friends = []
+friends.push(animals[0].username, animals[1].username)
+console.log(friends)
+
+var relationships = {}
+relationships.friends = friends
+console.log(relationships)
+console.log(Object.keys(relationships).length)
+
+var matches = []
+relationships.matches = matches
+relationships.matches.push(animals[2].username)
+console.log(relationships)
+
+for (i = 0; i < animals.length; i++) {
+  animals[i].relationships = relationships
+}
+console.log(animals)
