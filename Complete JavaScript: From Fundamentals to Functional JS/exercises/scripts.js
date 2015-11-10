@@ -23,7 +23,6 @@ for (var key in animal) {
 /* What happens if you return 'Hi my name is ' + ___ instead of using console.log() inside the loop? */
 // You wouldn't print the 'I like to say ' statement because you've returned from the loop
 
-
 /* https://github.com/bgando/array-exercises/ */
 var noiseArray = ['ribbit']
 
@@ -52,7 +51,6 @@ animals[animals.length] = quackers
 animals.push({ username: 'Sassy', tagline: 'Sweetpea is sooooo lame', noises: ['squeek', 'huff', 'sneeze', 'growl'] })
 animals.push({ username: 'Sweetpea', tagline: 'Whaaaaattttt?', noises: ['ruff', 'rawr', 'click', 'zing'] })
 
-
 /* https://github.com/bgando/function-exercises/ */
 // questions 1/2
 var AnimalTestUser = function (username) {
@@ -76,7 +74,7 @@ var AnimalTestUser = function (username) {
   }
 }
 
-var testSheep = AnimalTestUser('CottonBall', {'loves dancing': true}, [1,2,3] );
+var testSheep = AnimalTestUser('CottonBall', {'loves dancing': true}, [1, 2, 3])
 console.log(testSheep)
 
 // question 3

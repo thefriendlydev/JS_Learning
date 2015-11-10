@@ -22,5 +22,3 @@ box[3] = {'babyBox': true}
 
 box['length'] // 4 length is keep track of the last index
 box[box.length - 1] // { babyBox: true }
-
-
