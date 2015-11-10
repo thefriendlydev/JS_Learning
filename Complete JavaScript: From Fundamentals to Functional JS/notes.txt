@@ -1,1 +1,12 @@
 **Questions**
+1. Below what's better to use? She was mentioning variable hoisting what's that about?
+
+var aFunction = function () {
+  return 'a'
+}
+
+function bFunction () {
+  return 'b'
+}
+
+2.
